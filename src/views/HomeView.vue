@@ -4,7 +4,8 @@ import TheWelcome from '../components/TheWelcome.vue';
 import { useCounterStore } from '../stores/counter';
 
 const main = useCounterStore();
-const {counter, name} = storeToRefs(main);
+const { counter, name, doubleCount } = storeToRefs(main);
+const { addOne, reset } = main;
 
 function add(value) {
     main.$patch({
@@ -16,6 +17,11 @@ function add(value) {
     // main.$patch((state) => (state.counter += value))
 }
 
+main.$subscribe((mutation, state) => {
+    console.log("mutation", mutation)
+    console.log("state", state)
+})
+
 </script>
 
 <template>
@@ -24,12 +30,14 @@ function add(value) {
         <h2>Test: Setteo Pinia y Testing</h2>
         <h3>Name from store: {{name}}</h3>
         <h3>Counter from store: {{counter}}</h3>
+        <h3>DoubleCount getter: {{doubleCount}}</h3>
+
         <div class="cointainer-buttons">
-            <button @click="main.addOne">Click Me</button>
+            <button @click="addOne">Click Me</button>
             <button @click="add(15)">Add different (15 in this case)</button>
 
             <!-- <span >{{main.doubleCount(counter)}}</span> -->
-            <button @click="main.reset">Reset</button>
+            <button @click="reset">Reset</button>
         </div>
     </div>
 </template>
