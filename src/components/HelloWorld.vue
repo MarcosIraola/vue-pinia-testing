@@ -1,19 +1,19 @@
 <script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
+// defineProps({
+//   msg: {
+//     type: String,
+//     required: true
+//   }
+// })
 </script>
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
+    <h3 class="title">
+      Project created with
+      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a>,
+      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a> and
+      <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>.
     </h3>
   </div>
 </template>
@@ -33,7 +33,10 @@ h3 {
 .greetings h3 {
   text-align: center;
 }
-
+.title {
+  width: 80%;
+  margin: 0 auto;
+}
 @media (min-width: 1024px) {
   .greetings h1,
   .greetings h3 {

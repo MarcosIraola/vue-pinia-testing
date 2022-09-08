@@ -27,14 +27,14 @@ main.$subscribe((mutation, state) => {
 <template>
     <div class="container">
         <!-- <TheWelcome /> -->
-        <h2>Test: Setteo Pinia y Testing</h2>
+        <h2>Pinia</h2>
         <h3>Name from store: {{name}}</h3>
         <h3>Counter from store: {{counter}}</h3>
         <h3>DoubleCount getter: {{doubleCount}}</h3>
 
         <div class="cointainer-buttons">
             <button @click="addOne">Click Me</button>
-            <button @click="add(15)">Add different (15 in this case)</button>
+            <button @click="add(15)">Add 15</button>
 
             <!-- <span >{{main.doubleCount(counter)}}</span> -->
             <button @click="reset">Reset</button>
