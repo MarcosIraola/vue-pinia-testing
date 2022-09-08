@@ -57,16 +57,5 @@ describe('AboutView', () => {
         expect(wrapper.vm.counter).toBe(0)
         expect(wrapper.find('#counter-show').text()).toBe('counter: 0')
     })
-
-    // it('button click should call increment and counter data increments', async () => {
-    //     const spyAddOne = jest.spyOn(AboutView.methods, 'addOne')
-
-    //     const wrapper = shallowMount(AboutView)
-    //     const component = wrapper.find('#button-add')
-    //     await component.trigger('click')
-
-    //     expect(spyAddOne).toHaveBeenCalled(1)
-    //     expect(wrapper.vm.counter).toBe(1)
-    // })
     
 })

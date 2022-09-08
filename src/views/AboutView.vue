@@ -73,7 +73,6 @@ import View from '../components/View.vue'
     }
 
     .test-div {
-        background-color: green;
         position: fixed;
         bottom: 0;
         left: 0;

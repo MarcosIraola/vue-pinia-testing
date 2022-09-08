@@ -26,3 +26,10 @@ const getConsoleLog = () => {
         <slot></slot>
     </component>
 </template>
+
+<style scoped>
+    #vue-main-component {
+        background-color: green;
+    }
+
+</style>

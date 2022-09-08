@@ -5,6 +5,7 @@ exports[`View > snap shot matches 1`] = `
   "baseElement": <body>
     <div>
       <span
+        data-v-93a6c6b3=""
         disabled="false"
         id="viewID"
       >
@@ -15,6 +16,7 @@ exports[`View > snap shot matches 1`] = `
     </div>
     <div>
       <div
+        data-v-93a6c6b3=""
         disabled="false"
         id="#vue-main-component"
       >
@@ -25,6 +27,7 @@ exports[`View > snap shot matches 1`] = `
   </body>,
   "container": <div>
     <div
+      data-v-93a6c6b3=""
       disabled="false"
       id="#vue-main-component"
     >

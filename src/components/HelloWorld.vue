@@ -12,8 +12,7 @@ defineProps({
     <h3 class="title">
       Project created with
       <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a>,
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a> and
-      <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>.
+      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </h3>
     <h3>Hello Vitest</h3>
   </div>
