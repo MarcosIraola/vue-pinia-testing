@@ -32,7 +32,7 @@ import View from '../components/View.vue'
             <button @click="reset">reset</button>
         </div>
 
-        <View element="div">Hello from ViewComp</View>
+        <View element="div" class="test-div">Hello from VieComp</View>
 
     </div>
 </template>
@@ -51,15 +51,16 @@ import View from '../components/View.vue'
         padding: 5px 0;
     }
     
-    @media (min-width: 1024px) {
-        .about {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-    }
-
     .about {
         text-align: center;
+    }
+
+    .test-div {
+        background-color: green;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 5px;
     }
 </style>

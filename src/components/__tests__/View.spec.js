@@ -13,6 +13,10 @@ describe("View", () => {
             slots: { default: viewText }
         })
         const view = await screen.findByText(viewText);
+        
         expect(view.id).toBe(viewId);
+        expect(view.innerHTML).toBe(viewText);
+        expect(view.nodeName).toBe("SPAN");
+
     })
 })

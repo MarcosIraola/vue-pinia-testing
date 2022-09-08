@@ -1,6 +1,5 @@
 <script setup>
 import { storeToRefs } from 'pinia'
-import TheWelcome from '../components/TheWelcome.vue';
 import { useCounterStore } from '../stores/counter';
 
 const main = useCounterStore();
@@ -26,7 +25,6 @@ main.$subscribe((mutation, state) => {
 
 <template>
     <div class="container">
-        <!-- <TheWelcome /> -->
         <h2>Pinia</h2>
         <h3>Name from store: {{name}}</h3>
         <h3>Counter from store: {{counter}}</h3>
@@ -35,8 +33,6 @@ main.$subscribe((mutation, state) => {
         <div class="cointainer-buttons">
             <button @click="addOne">Click Me</button>
             <button @click="add(15)">Add 15</button>
-
-            <!-- <span >{{main.doubleCount(counter)}}</span> -->
             <button @click="reset">Reset</button>
         </div>
     </div>
