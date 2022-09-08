@@ -1,10 +1,10 @@
 <script setup>
-// defineProps({
-//   msg: {
-//     type: String,
-//     required: true
-//   }
-// })
+defineProps({
+  msg: {
+    type: String,
+    required: true
+  }
+})
 </script>
 
 <template>
@@ -15,6 +15,7 @@
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a> and
       <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>.
     </h3>
+    <h3>Hello Vitest</h3>
   </div>
 </template>
 

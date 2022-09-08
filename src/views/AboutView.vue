@@ -1,6 +1,7 @@
 
 <script setup>
 import {ref, reactive} from 'vue';
+import View from '../components/View.vue'
 
     const counter = ref(0);
 
@@ -30,6 +31,9 @@ import {ref, reactive} from 'vue';
             <button @click="addWith(20)">Sumar 20</button>
             <button @click="reset">reset</button>
         </div>
+
+        <View element="div">Hello from ViewComp</View>
+
     </div>
 </template>
 
