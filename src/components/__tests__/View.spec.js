@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/vue";
+import { shallowMount, mount } from "@vue/test-utils";
 import {describe, it, expect} from "vitest";
 import View from '../View.vue';
 
@@ -22,4 +23,14 @@ describe("View", () => {
         const wrapper = render(View, {props: {element:"div"}})
         expect(wrapper).toMatchSnapshot();
     })
+    
+    it('emits correctly', async() => {
+        const wrapper = shallowMount(View)
+        const component = wrapper.find('#vue-main-component')
+        // await component.trigger('click')
+
+        expect(component).toHaveBeenCalled(1);
+    })
+
+    
 })

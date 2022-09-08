@@ -13,10 +13,16 @@ defineProps({
     }
 })
 
+const emits = defineEmits('pressed');
+
+const getConsoleLog = () => {
+    emits('pressed')
+}
+
 </script>
 
 <template>
-    <component :is="element" :aria-label="ariaLabel" :disabled="isDisabled">
+    <component id="#vue-main-component" :is="element" :aria-label="ariaLabel" :disabled="isDisabled" @click="getConsoleLog()">
         <slot></slot>
     </component>
 </template>

@@ -21,6 +21,10 @@ import View from '../components/View.vue'
     const onChange = (event) => {
         console.log('input', inputValue.value)
     }
+
+    const imprimiAlgo = () => {
+        console.log('Imprimiendo desde el padre')
+    }
     
 </script>
 
@@ -46,7 +50,7 @@ import View from '../components/View.vue'
                 @input="onChange($event)"
             >
         </div>
-        <View element="div" class="test-div">Hello from VieComp</View>
+        <View element="div" class="test-div" @pressed="imprimiAlgo()">Hello from VieComp</View>
     </div>
 </template>
 
