@@ -4,6 +4,7 @@ import {ref, reactive} from 'vue';
 import View from '../components/View.vue'
 
     const counter = ref(0);
+    const inputValue = ref('')
 
     const addOne = () => {
         counter.value++
@@ -16,6 +17,10 @@ import View from '../components/View.vue'
     const reset = () => {
         counter.value = 0;
     }
+
+    const onChange = (event) => {
+        console.log('input', inputValue.value)
+    }
     
 </script>
 
@@ -24,28 +29,36 @@ import View from '../components/View.vue'
     <div class="about">
         <h1>Testing</h1>
         <h2>Counter</h2>
-        <h2>counter: {{ counter }}</h2>
+        <p id="counter-show">counter: {{ counter }}</p>
 
-        <div class="container_buttons">
-            <button @click="addOne">Sumar</button>
-            <button @click="addWith(20)">Sumar 20</button>
-            <button @click="reset">reset</button>
+        <div class="div-container">
+            <button id="button-add" @click="addOne">Sumar</button>
+            <button id="button-addWith" @click="addWith(20)">Sumar 20</button>
+            <button id="button-reset" @click="reset">reset</button>
         </div>
 
+        <div class="div-container">
+            <input 
+                id="name_input"
+                type="text" 
+                placeholder="Escribe tu nombre" 
+                v-model="inputValue" 
+                @input="onChange($event)"
+            >
+        </div>
         <View element="div" class="test-div">Hello from VieComp</View>
-
     </div>
 </template>
 
 
 <style scoped>
 
-    .container_buttons {
+    .div-container {
         display: flex;
         flex-direction: column;
     }
 
-    .container_buttons button {
+    .div-container button {
         width: 30%;
         margin: 2px auto;
         padding: 5px 0;
