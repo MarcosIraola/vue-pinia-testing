@@ -5,7 +5,7 @@ export const useCounterStore = defineStore('counter' , {
 
 	state: () => ({
 		counter: 0,
-		name: "Marcos"
+		name: "a"
 	}),
 	getters: {
 		doubleCount: (state) => {
@@ -18,6 +18,9 @@ export const useCounterStore = defineStore('counter' , {
 		},
 		addOne() {
 			this.counter++
+		},
+		setName(str) {
+			this.name = str
 		}
 	}
 })

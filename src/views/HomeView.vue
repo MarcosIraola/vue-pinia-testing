@@ -4,7 +4,7 @@ import { useCounterStore } from '../stores/counter';
 
 const main = useCounterStore();
 const { counter, name, doubleCount } = storeToRefs(main);
-const { addOne, reset } = main;
+const { addOne, reset, setName } = main;
 
 function add(value) {
     main.$patch({
@@ -34,6 +34,7 @@ main.$subscribe((mutation, state) => {
             <button @click="addOne">Click Me</button>
             <button @click="add(15)">Add 15</button>
             <button @click="reset">Reset</button>
+            <button @click="setName('Marcos')"> Change Name of store</button>
         </div>
     </div>
 </template>
