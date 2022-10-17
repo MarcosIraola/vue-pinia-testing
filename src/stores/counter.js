@@ -5,7 +5,7 @@ export const useCounterStore = defineStore('counter' , {
 
 	state: () => ({
 		counter: 0,
-		name: "a"
+		name: "NameFromStore"
 	}),
 	getters: {
 		doubleCount: (state) => {
